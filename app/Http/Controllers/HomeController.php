@@ -34,7 +34,7 @@ class HomeController extends Controller
         $user = Auth::user();
         $filename = $request->file('image');
         if($filename){
-        $filename = $filename->getRealPath();
+        //$filename = $filename->getRealPath();
         Cloudder::upload($filename, null);
         $file_url= Cloudder::show(Cloudder::getPublicId());
         $user->name = $request->name;

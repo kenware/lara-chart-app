@@ -14,15 +14,7 @@ class ChartRoomController extends Controller
 
     public function index()
     {
-        $title = Room::orderBy('id','desc')->get();
-        if($title){
-            $titles = $title;
-        }else{
-            $titles =array(
-                "foo" => "bar",
-                "bar" => "foo",
-             );
-        }
+        $titles = Room::orderBy('id','desc')->get();
         return view('welcome')
         ->with('titles',$titles)->with('navigation',false);
     }
@@ -48,5 +40,12 @@ class ChartRoomController extends Controller
         $titles = Room::where('category', '=',$category)->orderBy('id','desc')->get();
         return view('welcome')
         ->with('titles',$titles)->with('navigation','true')->with('category',$category);
+    }
+
+    public function search(Request $search)
+    {
+        $titles = Room::where('name','LIKE','%'.$search->search.'%')->orderBy('id','desc')->get();
+        return view('welcome')
+        ->with('titles',$titles)->with('navigation',false);
     }
 }

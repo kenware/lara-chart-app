@@ -3,10 +3,10 @@
 @section('content')
  
     <div class="row welcome">
-      <div class="sidebar col-md-3">
+      <div class="sidebar col-12 text-center col-sm-3">
       @include('sidebar')
       </div>
-      <div class="col-md-9 ml-auto">
+      <div class="col-12 col-sm-9 ml-auto">
       @include('breadcrumb') 
     <h2 class="text-center text-success room">{{$titles->count()}} Chart Groups</h2><br>
     <div class="row room">

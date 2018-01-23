@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top:6rem;">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
+    <div class="sidebar col-md-3 rext-center">
+      @include('sidebar')
+      </div>
+        <div class="col-12 col-md-9 ml-auto">
+            <div class="card">
+                <div class="card-header">Register</div>
+                <div class="card-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">

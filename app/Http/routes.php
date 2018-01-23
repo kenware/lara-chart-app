@@ -17,6 +17,7 @@ Route::auth();
 
 Route::get('/home', 'ChartRoomController@index');
 Route::post('/room', 'ChartRoomController@createRoom');
+Route::post('/search', 'ChartRoomController@search');
 Route::get('/chart/{id}', 'ChartMessageController@message');
 Route::post('/sendMessage', 'ChartMessageController@createMessage');
 Route::get('/reply/{id}', 'ChartMessageController@reply');

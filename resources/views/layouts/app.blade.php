@@ -41,19 +41,39 @@
         .welcome{
           margin-top: 5rem;
         }
-        .sidebar {
-          background-color: rgb(198, 235, 222);
-          color: white;
-          top:50px;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          z-index: 1000;
-          padding: 20px 0;
-          overflow-x: hidden;
-          overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-          border-right: 1px solid #eee;
+        #header{
+          background-color:aliceblue;
         }
+        
+        @media screen and (min-width: 30.9em) and (max-width: 35.9em) { 
+         .img-flud{
+          height: 14rem;
+          width: 14rem;
+         }
+        }
+@media only screen (max-width: 35.9em) { 
+    .sidebar{
+         margin-left:50%;
+     } 
+ 
+}
+     @media only screen and (min-width: 35.9em) {
+      .sidebar {
+        background-color: rgb(198, 235, 222);
+        color: white;
+        top:50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        border-right: 1px solid #eee;
+      }
+
+
+}
           </style>
 </head>
 <body id="app-layout">

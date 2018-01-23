@@ -1,10 +1,10 @@
      
 
-    <header class="container page-header row justify-center">
-           <div class="col-md-6 col-lg-8" >
+    <header class="container page-header row justify-center" id="header">
+           <div class="col-6 col-md-6 col-lg-8" >
              <h2 class="float-left text-sm-left" id="dash">Messanger</h2>
            </div>
-           <div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right">
+           <div class="dropdown user-dropdown col-6 col-md-6 col-lg-4 text-center text-md-right">
              <a class="btn btn-stripped dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              @if (Auth::user())
              <div><img src="{{{Auth::user()->user_image}}}" alt="profile photo" class="rounded-circle float-left profile-photo" width="50" height="auto"/></div>
@@ -29,56 +29,56 @@
            <div class="clear"></div>
          </header>
          <div class="row">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                 
                     Categories:
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/vacancy')}}"> 
                     Vacancy
                 </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/sports')}}"> 
                     Sports
                  </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                  <a class="" href="{{ url('/category/politics')}}">
                     Politics
                  </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                   <a class="" href="{{ url('/category/musics')}}">
                     Music
                   </a>   
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/videos')}}">
                     Videos
                 </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/movies')}}">
                     Movies
                 </a>    
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/hobies')}}">
                     Hobies
                 </a>    
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/schools')}}">
                     Schools
                 </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/travels')}}">
                     Travels
                 </a>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-lg-1">
                 <a class="" href="{{ url('/category/love')}}">
                     love
                 </a>

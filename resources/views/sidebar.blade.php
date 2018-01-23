@@ -1,6 +1,8 @@
-<ul class="nav">
-       <li><br><br> <a id="add" class="btn text-info nav-link">Add Chart</a></li>
-       <div class="row room">
+
+<ul class="nav flex-column"><br><br>
+       <li> <a id="add" class=" text-info nav-link">Add Chart</a></li>
+       <li> <a href="{{url('/profile')}}"  class="text-info nav-link">Profile</a></li>
+       <li><div class="row room">
           <div id="chart">
             @if (Auth::user())
             <div class="card border-secondary">
@@ -47,4 +49,22 @@
               <strong>{{ session()->get('status') }}</strong>
         </div>
         @endif
+  </li>
+  @if (Auth::guest())
+  <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link">Login</a></li>
+  <li class="nav-item"><a href="{{ url('/register') }}" class="nav-link">Register</a></li>
+    @endif
+ <li>
+ <form method="post" action="{{url('/search')}}">
+ <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <div className="input-group">
+           
+            <input type="text" name="search" className="form-control" placeholder="enter keyword"/>
+            <span className="input-group-btn">
+              <button className="btn btn-secondary" type="submit">Search</button>
+            </span>
+          
+          </div>
+          </form>
+ </l>
 </ul>
