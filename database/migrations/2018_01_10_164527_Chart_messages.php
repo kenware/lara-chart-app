@@ -16,7 +16,7 @@ class ChartMessages extends Migration
             $table->increments('id');
             $table->text('message');
             $table->string('user_image');
-            $table->integer('likes');
+            $table->integer('likes')->default(0);
             $table->string('user_name');
             $table->string('room_id');
             $table->string('user_id');

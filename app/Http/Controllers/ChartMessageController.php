@@ -29,7 +29,7 @@ class ChartMessageController extends Controller
         $user= Auth::user();
         $message = new Message;
         $message->message=$request->message;
-        $message->user_name=$user->name;
+        $message->user_name=$user->username;
         $message->user_image=$user->user_image;
         $message->user_id=$user->id;
         $room->messages()->save($message);
@@ -68,7 +68,7 @@ public function sendReply(Request $request)
     $user= Auth::user();
     $reply = new replie;
     $reply->reply=$request->message;
-    $reply->user_name=$user->name;
+    $reply->user_name=$user->username;
     $reply->user_image=$user->user_image;
     $reply->user_id=$user->id;
     $message->replies()->save($reply);

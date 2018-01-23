@@ -29,6 +29,7 @@ class ChartRoomController extends Controller
         $user= Auth::user();
         $room = new Room;
         $room->name=$request->name;
+        $room->user_name=$user->username;
         $room->user_image=$user->user_image;
         $room->category=$request->category;
         $user->room()->save($room);
