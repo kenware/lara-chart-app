@@ -14,7 +14,15 @@ class ChartRoomController extends Controller
 
     public function index()
     {
-        $titles = Room::orderBy('id','desc')->get();
+        $title = Room::orderBy('id','desc')->get();
+        if($title){
+            $titles = $title;
+        }else{
+            $titles =array(
+                "foo" => "bar",
+                "bar" => "foo",
+             );
+        }
         return view('welcome')
         ->with('titles',$titles)->with('navigation',false);
     }
