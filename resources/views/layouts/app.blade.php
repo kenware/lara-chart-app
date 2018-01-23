@@ -23,7 +23,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+  
         <style>
         body {
           
@@ -114,6 +114,6 @@
         });
     });
     </script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
 </body>
 </html>

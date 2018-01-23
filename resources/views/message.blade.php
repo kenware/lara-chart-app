@@ -25,11 +25,18 @@
             </p>
             <a class="btn btn-outline-success btn-sm">
                  <i class="fa fa-thumbs-up text-primary" aria-hidden="true"></i>&nbsp;
-                 likes
+                 like
+           </a>
+           <a class="btn btn-outline-success btn-sm">
+                {{ $message->likes}}
+           </a>
+           &nbsp;
+           <a class="btn btn-outline-success btn-sm" href="{{ url('/reply/'.$message->id.'/#replies')}}">
+               
+             reply
            </a>
            <a class="btn btn-outline-success btn-sm" href="{{ url('/reply/'.$message->id.'/#replies')}}">
-                 <i class="fa fa-thumbs-up text-primary" aria-hidden="true"></i>&nbsp;
-                {{$message->replies()->count()}} reply
+                {{$message->replies()->count()}}
            </a>
       </div>
     </div>               
