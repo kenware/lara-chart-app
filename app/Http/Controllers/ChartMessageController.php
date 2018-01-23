@@ -8,7 +8,7 @@ use Validator;
 use App\Http\Requests;
 use App\Message;
 use App\Room;
-use App\replie;
+use App\Replie;
 use Auth;
 class ChartMessageController extends Controller
 {
@@ -66,7 +66,7 @@ public function sendReply(Request $request)
     $id = $request->id;
     $message = Message::find($id);
     $user= Auth::user();
-    $reply = new replie;
+    $reply = new Replie;
     $reply->reply=$request->message;
     $reply->user_name=$user->username;
     $reply->user_image=$user->user_image;
