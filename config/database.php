@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'sql3.freesqldatabase.com'),
+            'host' => env('DB_HOST', '65.19.141.67'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'sql3217395'),
-            'username' => env('DB_USERNAME', 'sql3217395'),
-            'password' => env('DB_PASSWORD', 'gwUixtKIdi'),
+            'database' => env('DB_DATABASE', 'ejykken_mydb'),
+            'username' => env('DB_USERNAME', 'ejykken_mydb'),
+            'password' => env('DB_PASSWORD', 'dehydrogenase1'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
